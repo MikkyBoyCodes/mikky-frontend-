@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MikkyConv">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/w99P1U6.png">
+    <title>Mikky.com Universal Converter</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+    <div style="text-align: center; margin-bottom: 20px;"><h1>MIKKY.COM<span> CONVERTER</span></h1></div>
+    <div class="interface-grid">
+        <div class="premium-card" onclick="launchSearchModal('source')">
+            <label>From</label>
+            <div class="interactive-row"><input type="number" id="fromAmount" value="1"></div>
+            <button class="custom-select-trigger-btn" id="fromCurrencyTrigger"><span id="fromCurrencyLabel">🇺🇸 USD</span> ▾</button>
+        </div>
+        <div class="premium-card" onclick="launchSearchModal('target')">
+            <label>To</label>
+            <div class="interactive-row"><input type="text" id="toAmount" placeholder="---" readonly></div>
+            <button class="custom-select-trigger-btn" id="toCurrencyTrigger"><span id="toCurrencyLabel">🇳🇬 NGN</span> ▾</button>
+        </div>
+    </div>
+    <button class="action-submit-btn" onclick="runJavaAssetConversion()">Convert Asset Value</button>
+    <div class="display-board">
+        <div id="statusMessage" style="color:var(--text-dimmed-gray); font-weight:700;">System Standby</div>
+    </div>
+</div>
+
+<div id="search-modal-viewport">
+    <button style="color:var(--neon-glow-cyan); margin-bottom:15px; border:none; background:none;" onclick="terminateSearchModal()">✕ CLOSE</button>
+    <div class="search-input-wrapper"><input type="text" id="modalSearchField" placeholder="Search currencies..." oninput="evaluateSearchFiltering()"></div>
+    <div class="filtered-scrollable-container" id="modalItemsGrid"></div>
+</div>
