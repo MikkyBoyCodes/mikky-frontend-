@@ -1,0 +1,14 @@
+:root { --bg-deep-space: #05070c; --panel-bg: rgba(18, 22, 33, 0.85); --neon-glow-cyan: #0ecac8; --neon-glow-blue: #0a84ff; --text-pure-white: #ffffff; --text-dimmed-gray: #8f9cae; --ui-divider: #1f2432; --success-green: #30d158; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; -webkit-font-smoothing: antialiased; -webkit-user-select: none; }
+        body { background-color: var(--bg-deep-space); color: var(--text-pure-white); min-height: 100vh; padding: 24px 16px; overflow: hidden; }
+        .app-shell { width: 100%; max-width: 385px; margin: 0 auto; }
+        .interface-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+        .premium-card { background-color: var(--panel-bg); border: 1px solid var(--ui-divider); border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+        .interactive-row input { width: 100%; background: none; border: none; outline: none; color: var(--text-pure-white); font-size: 20px; font-weight: 700; border-bottom: 1px solid var(--ui-divider); padding-bottom: 6px; }
+        .custom-select-trigger-btn { background-color: #161a26; color: var(--text-pure-white); border: 1px solid var(--ui-divider); font-size: 13px; font-weight: 600; padding: 10px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .action-submit-btn { width: 100%; background: linear-gradient(135deg, var(--neon-glow-cyan), var(--neon-glow-blue)); color: #050508; border: none; border-radius: 18px; padding: 18px; font-size: 14px; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; }
+        .display-board { background: var(--panel-bg); border-radius: 18px; padding: 20px; text-align: center; border: 1px solid var(--ui-divider); min-height: 90px; }
+        #search-modal-viewport { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(3, 5, 8, 0.98); z-index: 10000; display: none; flex-direction: column; padding: 40px 20px; }
+        .search-input-wrapper input { width: 100%; background-color: #161a26; border: 1px solid var(--neon-glow-cyan); border-radius: 12px; padding: 16px; font-size: 16px; color: var(--text-pure-white); }
+        .filtered-scrollable-container { flex-grow: 1; overflow-y: auto; margin-top: 20px; }
+        .currency-row-option { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--ui-divider); border-radius: 14px; padding: 16px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
